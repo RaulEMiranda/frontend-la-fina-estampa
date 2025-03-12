@@ -8,7 +8,6 @@ interface PaginatedResponse<T> {
   previous: string | null;
 }
 
-
 interface ProductFilters {
   page?: number;
   pageSize?: number;

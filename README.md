@@ -1,37 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# La Fina Estampa - Ecommerce
 
-## Getting Started
+## Descripción
 
-First, run the development server:
+La Fina Estampa es un proyecto de ecommerce diseñado para ofrecer una experiencia de compra en línea fluida y agradable. Este proyecto incluye una interfaz de usuario moderna y funcional, así como una integración con sistemas de pago y gestión de inventario.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Características
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Catálogo de productos**: Navega y busca entre una amplia variedad de productos.
+- **Carrito de compras**: Añade productos al carrito y gestiona tus compras.
+- **Proceso de pago**: Integración con pasarelas de pago seguras.
+- **Gestión de usuarios**: Registro e inicio de sesión de usuarios.
+- **Panel de administración**: Gestión de productos, pedidos y usuarios.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologías
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend**: React, Redux, HTML5, CSS3, JavaScript
+- **Backend**: Python, Django
+- **Base de datos**: MongoDB
+- **Autenticación**: 
+- **Despliegue**: 
 
-## Learn More
+## Instalación
 
-To learn more about Next.js, take a look at the following resources:
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/frontend-la-fina-estampa.git
+    ```
+2. Navega al directorio del proyecto:
+    ```bash
+    cd frontend-la-fina-estampa
+    ```
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+4. Inicia el servidor de desarrollo:
+    ```bash
+    npm start
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Licencia
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-## Deploy on Vercel
+## Contacto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Autores**: Raul - Luis - Nicole
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# frontend-la-fina-estampa
+¡Gracias por visitar nuestro proyecto!

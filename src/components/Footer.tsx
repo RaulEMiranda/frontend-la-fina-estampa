@@ -11,10 +11,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer
-      style={{ backgroundColor: "#333333" }}
-      className=" text-white pt-10 text-sm"
-    >
+    <footer className=" text-white pt-10 text-sm bg-[var(--color-secondary)]">
       <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 lg:gap-24 px-4 md:px-8 lg:px-40 ">
         {/* Redes */}
         <div>
@@ -26,7 +23,7 @@ const Footer = () => {
             <FaTiktok size={24} />
           </div>
           <h4 className="font-bold">
-            <Link href="/contacto">Contáctanos</Link>
+            <Link href="/contact">Contáctanos</Link>
           </h4>
 
           <p>Email: tienda@mail.com</p>

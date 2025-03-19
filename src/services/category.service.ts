@@ -1,13 +1,12 @@
-
 import { Category } from "@/schemas/category.schema";
-import api from "@/utils/api";
+import { apiPublic } from "@/utils/api";
 
 export const getCategories = async (): Promise<Category[]> => {
-  const { data } = await api.get("/categories/");
+  const { data } = await apiPublic.get("/categories/");
   return data;
 };
 
 export const getCategory = async (name: string): Promise<Category> => {
-  const { data } = await api.get(`/categories/${name}/`);
+  const { data } = await apiPublic.get(`/categories/${name}/`);
   return data;
 };

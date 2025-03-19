@@ -2,7 +2,7 @@
 
 import { Product } from "@/schemas/product.schema";
 import { getCategories, getCategory } from "@/services/category.service";
-import { getProductById, getProducts } from "@/services/product.service";
+import { getProducts } from "@/services/product.service";
 import { useEffect, useState } from "react";
 
 export default function Hola() {
@@ -12,15 +12,13 @@ export default function Hola() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const data = await getProducts({ page: 1, pageSize: 10, category: 1 }); 
-        const result = await getCategory( "Animes")
-        const results = await getCategories()
-        const product = await getProductById("Satoru Gojo")
-        console.log(product);
-        
+        const data = await getProducts({ page: 1, pageSize: 10, category: 1 });
+        const result = await getCategory("Animes");
+        const results = await getCategories();
+
         console.log(results);
         console.log(result);
-        
+
         setProducts(data.results);
         setTotalCount(data.count);
         console.log(data);

@@ -1,37 +1,27 @@
 import { Product } from "@/schemas/product.schema";
-import api from "@/utils/api";
+import { apiPublic } from "@/utils/api";
 
-interface PaginatedResponse<T> {
-  results: T[];
-  count: number;
-  next: string | null;
-  previous: string | null;
-}
-
-interface ProductFilters {
+export const getProducts = async (params?: {
   page?: number;
-  pageSize?: number;
-  category?: number;
-  subcategory?: number;
+  page_size?: number;
   search?: string;
-  ordering?: string;
-}
-
-export const getProducts = async (filters: ProductFilters = {}) => {
-  const params = new URLSearchParams();
-
-  if (filters.page) params.append("page", filters.page.toString());
-  if (filters.pageSize) params.append("page_size", filters.pageSize.toString());
-  if (filters.category) params.append("category", filters.category.toString());
-  if (filters.subcategory) params.append("subcategory", filters.subcategory.toString());
-  if (filters.search) params.append("search", filters.search);
-  if (filters.ordering) params.append("ordering", filters.ordering);
-
-  const { data } = await api.get<PaginatedResponse<Product>>(`/products/?${params.toString()}`);
+  ordering?: "price" | "-price" | "name" | "-name";
+}): Promise<{ results: Product[]; count: number }> => {
+  const { data } = await apiPublic.get("/products/", { params });
   return data;
 };
 
-export const getProductById = async (name: string) => {
-  const { data } = await api.get<Product>(`/products/${name}/`);
+export const getProduct = async (id: number): Promise<Product> => {
+  const { data } = await apiPublic.get(`/products/${id}/`);
+  return data;
+};
+
+export const getProductsByCategory = async (
+  category_name: string,
+  subcategory?: string
+): Promise<{ results: Product[]; count: number }> => {
+  const { data } = await apiPublic.get(`/products/category/${category_name}/`, {
+    params: subcategory ? { subcategory } : {},
+  });
   return data;
 };
